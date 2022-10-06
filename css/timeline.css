@@ -13,7 +13,7 @@
   }
 
   .timeline__content-title {
-      font-weight: normal;
+      font-weight: bold;
       font-size: 66px;
       margin: -10px 0 0 0;
       transition: 0.4s;
@@ -179,7 +179,7 @@
       color: #fff;
       font-size: 58px;
       font-family: 'Oswald', sans-serif;
-      font-weight: normal;
+      font-weight: bold;
       margin: 0;
   }
 
@@ -189,7 +189,7 @@
       font-size: 16px;
       letter-spacing: 5px;
       margin: 10px 0 0 0;
-      font-weight: normal;
+      font-weight: bold;
   }
 
   .demo-footer {

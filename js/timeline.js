@@ -8,14 +8,31 @@
             img: ".timeline__img"
         };
         selectors.item.eq(0).addClass(selectors.activeClass);
+        selectors.item.removeClass(selectors.activeClass);
         selectors.id.css(
-            "background-image",
-            "url(" +
+            "background",
+            "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(" +
             selectors.item
-                .first()
+                .last()
                 .find(selectors.img)
                 .attr("src") +
             ")"
+        );
+        selectors.id.css(
+            "background-position",
+            "center"
+        );
+        selectors.id.css(
+            "background-attachment",
+            "fixed"
+        );
+        selectors.id.css(
+            "background-repeat",
+            "no-repeat"
+        );
+        selectors.id.css(
+            "background-size",
+            "contain"
         );
         var itemLength = selectors.item.length;
         $(window).scroll(function () {
@@ -28,23 +45,55 @@
                 if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
                     selectors.item.removeClass(selectors.activeClass);
                     selectors.id.css(
-                        "background-image",
-                        "url(" +
+                        "background",
+                        "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(" +
                         selectors.item
                             .last()
                             .find(selectors.img)
                             .attr("src") +
                         ")"
                     );
+                    selectors.id.css(
+                        "background-position",
+                        "center"
+                    );
+                    selectors.id.css(
+                        "background-attachment",
+                        "fixed"
+                    );
+                    selectors.id.css(
+                        "background-repeat",
+                        "no-repeat"
+                    );
+                    selectors.id.css(
+                        "background-size",
+                        "contain"
+                    );
                     selectors.item.last().addClass(selectors.activeClass);
                 } else if (pos <= max - 40 && pos >= min) {
                     selectors.id.css(
-                        "background-image",
-                        "url(" +
+                        "background",
+                        "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(" +
                         $(this)
                             .find(selectors.img)
                             .attr("src") +
                         ")"
+                    );
+                    selectors.id.css(
+                        "background-position",
+                        "center",
+                    );
+                    selectors.id.css(
+                        "background-attachment",
+                        "fixed"
+                    );
+                    selectors.id.css(
+                        "background-repeat",
+                        "no-repeat"
+                    );
+                    selectors.id.css(
+                        "background-size",
+                        "contain"
                     );
                     selectors.item.removeClass(selectors.activeClass);
                     $(this).addClass(selectors.activeClass);
@@ -53,7 +102,6 @@
         });
     };
 })(jQuery);
-
 $("#timeline-1").timeline();
 $("#timeline-2").timeline();
 $("#timeline-3").timeline();
