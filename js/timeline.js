@@ -13,7 +13,7 @@
             "background",
             "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(" +
             selectors.item
-                .last()
+                .first()
                 .find(selectors.img)
                 .attr("src") +
             ")"
@@ -105,4 +105,3 @@
 $("#timeline-1").timeline();
 $("#timeline-2").timeline();
 $("#timeline-3").timeline();
-$("#timeline-4").timeline();
