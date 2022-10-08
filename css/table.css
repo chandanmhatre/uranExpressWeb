@@ -48,6 +48,7 @@ h2 small {
 .responsive-table .col-2 {
     flex-basis: 40%;
     color: black;
+    
 }
 
 .responsive-table .col-3 {
@@ -72,7 +73,7 @@ h2 small {
     }
 
     .responsive-table .col {
-        display: flex;
+        /* display: flex; */
         padding: 10px 0;
     }
 

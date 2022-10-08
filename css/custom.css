@@ -156,12 +156,13 @@ h1 {
 
 .slider-contant h3 {
     font-size: 58px;
-    font-weight: 700;
+    font-weight: 500;
     text-shadow: none;
     color: #fff;
-    text-align: left;
+    text-align: center;
     line-height: 52px;
     letter-spacing: -2px;
+    text-shadow: 2px 3px 7px #000000;
 }
 
 #carousel-example-generic .carousel-caption {
@@ -172,6 +173,7 @@ h1 {
 
 .color-yellow {
     color: #ffcb05;
+    font-weight: bolder;
 }
 
 .carousel-caption p {
@@ -2184,21 +2186,33 @@ span a.comment-reply-link {
     }
 
     #carousel-example-generic .carousel-caption {
-        right: 0;
-        display: block;
+        position: absolute;
+        right: 5%;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        padding: 0;
+        padding-bottom: 0px;
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
 
     .slider-contant h3 {
-        font-size: 25px;
-        font-weight: 700;
+        font-size: 44px;
+        font-weight: 500;
         text-shadow: none;
         color: #fff;
-        text-align: left;
+        text-align: center;
         line-height: 1.1;
+        text-shadow: 2px 3px 7px #000000
     }
 
     .slider-contant {
-        display: none;
+        /* display: none; */
     }
 
     .menu {
@@ -2265,9 +2279,9 @@ span a.comment-reply-link {
         display: none;
     }
 
-    .news {
+    /* .news {
         display: none;
-    }
+    } */
 
     .team-btw-match ul {
         position: relative;
