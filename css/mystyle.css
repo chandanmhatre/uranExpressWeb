@@ -7,6 +7,12 @@
     font-family: "Nunito", sans-serif;
 }
 
+.headerText {
+    color: white;
+    font-weight: bold;
+    font-size: x-large;
+}
+
 .boxShadow {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     ;
@@ -91,11 +97,19 @@
     .cards_wrap .card_item {
         width: 33.3%;
     }
+
+    .headerText {
+        font-size: large;
+    }
 }
 
 @media (max-width: 768px) {
     .cards_wrap .card_item {
         width: 50%;
+    }
+
+    .headerText {
+        font-size: medium;
     }
 }
 
@@ -176,4 +190,12 @@ body {
 
 .parent {
     position: relative;
+}
+
+.imgHover:hover {
+    filter: brightness(60%);
+}
+
+.imgHover {
+    transition: .2s ease-in-out;
 }

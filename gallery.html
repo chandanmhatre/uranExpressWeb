@@ -15,6 +15,8 @@
 <link rel="apple-touch-icon" href="">
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
 <!-- Site CSS -->
 <link rel="stylesheet" href="style.css">
 <!-- Colors CSS -->
@@ -33,7 +35,9 @@
 <link rel="stylesheet" href="css/3dslider.css" />
 <link rel="stylesheet" href="css/mystyle.css" />
 <link rel="stylesheet" href="css/imageModal.css" />
-
+<link rel="stylesheet" href="css/image-popup.css" />
+<link rel="stylesheet" href="css/image-popup.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 <script src="js/3dslider.js"></script>
@@ -81,7 +85,7 @@
                      </div>
                   </div>
                   <div class="col-md-6" style="text-align: center;align-self: center;">
-                     <h2 style="color: white; font-weight: bold; font-size: x-large;">International Athlete, NS-NIS
+                     <h2 class="headerText">International Athlete, NS-NIS
                         Athletics Coach and Fitness Trainer</h2>
                   </div>
                   <div class="col-md-3">
@@ -130,6 +134,7 @@
                                           style="color: rgb(240, 240, 240);padding-left: 15px;padding-right: 15px;margin: -4px;">Gallery</a>
                                     </li>
                                     <li><a href="news.html">News</a></li>
+                                    <li><a href="certificate.html">Certificate</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                  </ul>
                               </div>
@@ -143,6 +148,36 @@
          </div>
       </header>
    </section>
+
+   <div class="modal fade" id="imgViewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <!-- w-100 class so that header
+                div covers 100% width of parent div -->
+               <h5 class="modal-title w-100" id="exampleModalLabel">
+                  GeeksForGeeks
+               </h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">
+                     ×
+                  </span>
+               </button>
+            </div>
+            <!--Modal body with image-->
+            <div class="modal-body">
+               <img src="" id="ViewImage" />
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-danger" data-dismiss="modal">
+                  Close
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+
    <section>
       <div class="main-heading-holder">
          <div class="main-heading sytle-2">
@@ -151,56 +186,131 @@
       </div>
    </section>
    <section>
-      <div class="row">
+      <div class="row container-fluid">
          <div class="column">
-            <img src="images/img12.jpg" style="width:100%">
-            <img src="images/img93.jpg" style="width:100%">
-            <img src="images/img2.jpg" style="width:100%">
-            <img src="images/img5.jpg" style="width:100%">
-            <img src="images/img10.jpg" style="width:100%">
-            <img src="images/img7.jpg" style="width:100%">
-            <img src="images/img8291.jpg" style="width:100%">
-            <img src="images/img9092.jpg" style="width:100%">
-            <img src="images/img040943.jpg" style="width:100%">
-            <img src="images/img98292.jpg" style="width:100%">
+            <a href="images/img12.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img12.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img93.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img93.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img2.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img2.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img5.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img5.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img10.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img10.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img7.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img7.jpg" class="imgHover" style="width:100%">
+            </a>
+
+            <a href="images/img8291.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img8291.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img9092.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img9092.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img040943.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img040943.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img98292.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img98292.jpg" class="imgHover" style="width:100%">
+            </a>
          </div>
          <div class="column">
-            <img src="images/img20.jpg" style="width:100%">
-            <img src="images/img30-3.jpg" style="width:100%">
-            <img src="images/img92.jpg" style="width:100%">
-            <img src="images/img3.jpg" style="width:100%">
-            <img src="images/img282.jpg" style="width:100%">
-            <img src="images/img00302.jpg" style="width:100%">
-            <img src="images/img1.jpg" style="width:100%">
-            <img src="images/img293029.jpg" style="width:100%">
+            <a href="images/img20.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img20.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img30-3.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img30-3.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img92.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img92.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img3.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img3.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img282.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img282.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img00302.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img00302.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img1.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img1.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img293029.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img293029.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img049302.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img049302.jpg" class="imgHover" style="width:100%">
+            </a>
+         </div>
+         <div class="column">
+            <a href="images/img0303.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img0303.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img0323.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img0323.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img8.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img8.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img334.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img334.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img0504.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img0504.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img0403.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img0403.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img0303023.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img0303023.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img03399202.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img03399202.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/instadium.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/instadium.jpg" class="imgHover" style="width:100%">
+            </a>
 
          </div>
          <div class="column">
-            <img src="images/img0303.jpg" style="width:100%">
-            <img src="images/img0323.jpg" style="width:100%">
-            <img src="images/img8.png" style="width:100%">
-            <img src="images/img334.jpg" style="width:100%">
-            <img src="images/img0504.jpg" style="width:100%">
-            <img src="images/img0403.jpg" style="width:100%">
-            <img src="images/img0303023.jpg" style="width:100%">
-            <img src="images/img03399202.jpg" style="width:100%">
-            <img src="images/instadium.jpg" style="width:100%">
-            <img src="images/img049302.jpg" style="width:100%">
-         </div>
-         <div class="column">
-            <img src="images/img820.jpg" style="width:100%">
-            <img src="images/img822.jpg" style="width:100%">
-            <img src="images/img940.jpg" style="width:100%">
-            <img src="images/img945.jpg" style="width:100%">
-            <img src="images/img1002.jpg" style="width:100%">
-            <img src="images/img2920.jpg" style="width:100%">
-            <img src="images/practice.jpg" style="width:100%">
-            <img src="images/suhaskhamkar.jpg" style="width:100%">
-            <img src="images/withmedal.jpg" style="width:100%">
+            <a href="images/img820.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img820.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img822.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img822.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img940.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img940.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img945.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img945.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img1002.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img1002.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/img2920.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/img2920.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/practice.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/practice.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/suhaskhamkar.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/suhaskhamkar.jpg" class="imgHover" style="width:100%">
+            </a>
+            <a href="images/withmedal.jpg" class="fancybox" data-fancybox="gallery1">
+               <img src="images/withmedal.jpg" class="imgHover" style="width:100%">
+            </a>
          </div>
       </div>
    </section>
-   <footer id="footer" class="footer">
+   <footer id="footer" class="footer" style="margin-top: 40px;">
       <div class="container">
          <div class="row">
             <div class="col-md-4">
@@ -280,6 +390,9 @@
    <script src="js/all.js"></script>
    <!-- ALL PLUGINS -->
    <script src="js/custom.js"></script>
+   <script src="js/image-popup.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
 </body>
 
 </html>
