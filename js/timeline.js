@@ -41,8 +41,7 @@
             selectors.item.each(function (i) {
                 min = $(this).offset().top - 100;
                 max = $(this).height() + $(this).offset().top - 300;
-                var that = $(this);
-                if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+                if (i == itemLength - 2 && pos > min + $(this).height()) {
                     selectors.item.removeClass(selectors.activeClass);
                     selectors.id.css(
                         "background",
