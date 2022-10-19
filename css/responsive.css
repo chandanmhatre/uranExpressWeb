@@ -43,7 +43,7 @@
     }
 
     .container-fluid {
-        width: 100%;
+        width: fit-content;
         padding: 0 15px;
     }
 
@@ -360,6 +360,10 @@
 
     body.seo_version .nopadtop {
         padding-top: 120px;
+    }
+
+    .container-fluid {
+        width: fit-content;
     }
 
     body.host_version .affix,
