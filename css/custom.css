@@ -581,7 +581,7 @@ div.menu .dropdown-menu {
     width: 100%;
     min-height: 50px;
     background: #0e55b6;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     padding: 6px 0;
 }
